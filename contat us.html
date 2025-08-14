@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contactez-nous</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      margin: 0;
+      padding: 29px;
+    }
+  nav a  {
+        width: 200px;
+        padding: 100px;
+        height: 100px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+    }
+
+
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background-color: #1a1a1a;
+      color: white;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #333;
+    }
+
+    .confirmation {
+      display: none;
+      margin-top: 10px;
+      color: green;
+    }
+    nav a:hover {
+      color: #00000086;
+      transform: scale(1.1);}
+  </style>
+</head>
+ <h1 align="center"><img src="https://tse2.mm.bing.net/th/id/OIP.chWnn7vSAA0i_Kp3VrAs6AHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"width="200px"></h1>
+    <div class="container"></div>
+    <nav>
+        <a href="http://127.0.0.1:5500/yellow/Men.html"> Home</a>
+        <a href="Product.html">Products</a>
+        <a href="about.html"> About us</a>
+        <a href="contat us.html">Contact us</a>
+        </nav>
+<body>
+
+
+  <div class="container">
+
+    <form onsubmit="sendmessage(event)">
+      <label for="nom">Nom</label>
+      <input type="text" id="nom" name="nom" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+
+    <div class="confirmation" id="confirmation">
+      ✅ thank you for your message ! we answer soon.
+    </div>
+  </div>
+
+  <script>
+    function envoyerMessage(event) {
+      event.preventDefault();
+      document.getElementById("confirmation").style.display = "block";
+    }
+  </script>
+  
+
+</body>
+</html>
